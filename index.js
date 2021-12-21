@@ -12,5 +12,19 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+   return tutorials.map(title =>
+     title.split(' ').map(word =>
+       word[0].toUpperCase() + word.substring(1)).join(' '))
 }
+
+console.log(titleCased(tutorials))
+
+
+
+// TALK IT OUT
+// new array
+// iterate through each string
+// split strings to individual words
+// iterate through each word and update the first letter of each word to capital
+// join each word back together to form full string
+// return array
